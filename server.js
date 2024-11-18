@@ -40,7 +40,7 @@ const authenticateToken = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, SECRET_KEY);
+    const decoded = jwt.verify(token, JWT_SECRET);
     req.user = decoded; // Attach user info to the request
     next();
   } catch (err) {
