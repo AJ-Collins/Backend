@@ -11,8 +11,6 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: 'https://affiliate-hub.netlify.app', // Replace with your frontend's domain
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type'],
   credentials: true
 }));
 
