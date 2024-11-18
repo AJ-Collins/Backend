@@ -150,7 +150,7 @@ app.delete('/api/products/:id', authenticateToken, async (req, res) => {
     res.status(500).json({ message: 'Failed to delete product' });
   }
 });
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 // Initialize database and start server
 initDb().then(() => {
   app.listen(PORT, () => {
